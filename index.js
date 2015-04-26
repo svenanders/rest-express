@@ -3,7 +3,8 @@ var express = require('express');
 var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
 var app = express();
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/restapi/cities');
+mongoose.connect(process.env.MONGOLAB_URI ||
+	'mongodb://localhost/restapi/cities');
 
 //app.use(express.static(__dirname + '/build'));
 
